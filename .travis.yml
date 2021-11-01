@@ -1,2 +1,17 @@
+version: ~> 1.0
+dist: bionic
 language: python
-script: true
+
+env:
+  global:
+    - PYTHONIOENCODING: utf8
+
+python:
+  - '3.6'
+
+before_install:
+  - pip install -U requests
+
+
+script: 
+  - python run.py
